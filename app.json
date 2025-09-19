@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "AutoTrackr",
+    "name": "FlipTrackr",
     "slug": "fliptracker",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,7 +13,12 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.asifac.fliptracker",
+      "buildNumber": "2",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -27,6 +32,12 @@
     },
     "plugins": [
       "expo-sqlite"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "363f1b34-73be-46a0-963e-b2ce9abbc9ba"
+      }
+    },
+    "owner": "asifac"
   }
 }

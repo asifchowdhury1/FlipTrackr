@@ -33,7 +33,7 @@ const Settings: React.FC = () => {
 
         const displayName = [flip.year, flip.make, flip.model].filter(Boolean).join(' ') || 'Untitled Flip';
         
-        csvContent = `AutoTrackr Export - ${displayName}\n`;
+        csvContent = `FlipTrackr Export - ${displayName}\n`;
         csvContent += `Generated: ${new Date().toLocaleDateString()}\n\n`;
         
         // Flip summary
@@ -55,7 +55,7 @@ const Settings: React.FC = () => {
         csvContent += `ROI,${(totals.roi * 100).toFixed(1)}%\n`;
       } else {
         // All flips export
-        csvContent = 'AutoTrackr - All Flips Export\n';
+        csvContent = 'FlipTrackr - All Flips Export\n';
         csvContent += `Generated: ${new Date().toLocaleDateString()}\n\n`;
         csvContent += 'Flip ID,Year,Make,Model,Miles,Buy Price,Sell Price,Sold Date,Total Cost,Profit,ROI\n';
 
@@ -97,7 +97,7 @@ const Settings: React.FC = () => {
       if (await Sharing.isAvailableAsync()) {
         await Sharing.shareAsync(fileUri, {
           mimeType: 'text/csv',
-          dialogTitle: 'Export AutoTrackr Data',
+          dialogTitle: 'Export FlipTrackr Data',
         });
       } else {
         Alert.alert('Success', `CSV exported to ${fileUri}`);

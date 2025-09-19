@@ -216,7 +216,7 @@ const Home: React.FC = () => {
             <TouchableOpacity style={styles.headerButton} onPress={toggleSelectionMode}>
               <Text style={styles.headerButtonText}>Select</Text>
             </TouchableOpacity>
-            <Text style={styles.headerTitle}>AutoTrackr</Text>
+            <Text style={styles.headerTitle}>FlipTrackr</Text>
             <TouchableOpacity
               style={styles.headerButton}
               onPress={() => navigation.navigate('Settings')}
